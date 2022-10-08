@@ -1,0 +1,11 @@
+column,start,length
+file_number,0,8
+incorp_date,8,8
+extended_date,16,8
+state_code,24,2
+corp_intent,26,3
+status,29,2
+type_corp,31,1
+trans_date,32,8
+pres_name_addr,40,60
+sec_name_addr,100,60

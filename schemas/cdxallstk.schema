@@ -1,0 +1,8 @@
+column,start,length
+file_number,0,8
+stock_class,8,25
+stock_series,33,25
+voting_rights,58,1
+authorized_shares,59,13
+issued_shares,72,16
+par_value,88,13

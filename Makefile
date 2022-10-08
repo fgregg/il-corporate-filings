@@ -1,30 +1,22 @@
-foo :
-	https://www.ilsos.gov/data/bs/llcallmst.zip
+.PHONY : all
+all : llc.zip corporate.zip
 
-	https://www.ilsos.gov/data/bs/llcallnam.zip
+llc.zip : llcallmst.csv llcallnam.csv llcallagt.csv llcallarp.csv llcallase.csv llcallold.csv llcallmgr.csv llcallser.csv
+	zip $@ $^
 
-	https://www.ilsos.gov/data/bs/llcallagt.zip
+corporate.zip : cdxallmst.csv cdxallnam.csv cdxallagt.csv cdxallarp.csv cdxallaon.csv cdxallstk.csv cdxalloth.csv
+	zip $@ $^
 
-	https://www.ilsos.gov/data/bs/llcallarp.zip
-
-	https://www.ilsos.gov/data/bs/llcallase.zip
-
-	https://www.ilsos.gov/data/bs/llcallold.zip
-
-	https://www.ilsos.gov/data/bs/llcallmgr.zip
-
-	https://www.ilsos.gov/data/bs/llcallser.zip
-
-csvs : mst.csv nam.csv agt.csv arp.csv ase.csv old.csv mgr.csv ser.csv
-
-%.csv : llcall%.txt schemas/llcall%.schema
-	cat $< | \
-            perl -pe 's/\xDD/[/g' | \
-            perl -pe 's/\xA8/\]/g' | \
-            perl -pe 's/\xAC/^/g' | \
+%.csv : %.txt schemas/%.schema
+	iconv -f ISO-8859-9 -t UTF-8 $< | \
+            perl -pe 's/İ/[/g' | \
+            perl -pe 's/¨/\]/g' | \
+            perl -pe 's/¬/^/g' | \
+            perl -pe 's/\x0//g' | \
             tail -n+2 | \
             sed '$$d' | \
-            in2csv -f fixed -s $(word 2,$^) > $@
+            in2csv -f fixed -s $(word 2,$^) | \
+            python scripts/to_datelike.py > $@
 
 %.txt : %.zip
 	unzip $<

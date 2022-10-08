@@ -1,0 +1,7 @@
+column,start,length
+file_number,0,8
+cancel_date,8,8
+assumed_curr_date,16,8
+assumed_old_ind,24,1
+assumed_old_date,25,8
+assumed_old_name,33,189
