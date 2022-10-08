@@ -1,0 +1,5 @@
+column,start,length
+file_number,0,8
+old_date_filed,8,8
+llc_name,16,120
+series_nbr,136,3

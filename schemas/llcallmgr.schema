@@ -1,0 +1,9 @@
+column,start,length
+file_number,0,8
+mm_name,8,60
+mm_street,68,45
+mm_city,113,30
+mm_juris,143,2
+mm_zip,145,9
+mm_file_date,154,8
+mm_type_code,162,1

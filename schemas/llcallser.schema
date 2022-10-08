@@ -1,0 +1,8 @@
+column,start,length
+file_number,0,8
+series_number,8,3
+series_status,11,2
+status_date,13,8
+begin_date,21,8
+dissolution_date,29,8
+series_name,37,240

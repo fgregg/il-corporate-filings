@@ -1,0 +1,12 @@
+column,start,length
+file_number,0,8
+cur_mail_date,8,8
+cur_file_date,16,8
+cur_deliq_date,24,8
+cur_paid_amt,32,5
+cur_year_due,37,4
+pv_mail_date,41,8
+pv_file_date,49,8
+pv_deliq_date,57,8
+pv_paid_amt,65,5
+pv_year_due,70,4

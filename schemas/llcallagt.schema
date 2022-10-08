@@ -1,0 +1,9 @@
+column,start,length
+file_number,0,8
+agent_code,8,1
+agent_name,9,60
+agent_street,69,45
+agent_city,114,30
+agent_zip,144,9
+agent_county_code,153,3
+agent_change_date,156,8

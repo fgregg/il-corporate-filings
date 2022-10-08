@@ -1,0 +1,10 @@
+column,start,length
+file_number,0,8
+assumed_adopt_date,8,8
+assumed_can_date,16,8
+assumed_can_code,25,1
+assumed_renew_year,25,4
+assumed_renew_date,29,8
+assumed_ind,37,1
+llc_name,38,240
+series_nbf,278,3
