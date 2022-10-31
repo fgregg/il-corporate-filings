@@ -26,10 +26,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: setup requirements
+      - name: system dps
+        run: sudo apt-get install tor
+      - name: setup requirementss
         run: pip install -r requirements.txt
       # Runs a single command using the runners shell
-      - uses: tor-actions/setup-tor@main
       - name: build database
         run: torify make
  
