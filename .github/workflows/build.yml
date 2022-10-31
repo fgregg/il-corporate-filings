@@ -32,7 +32,7 @@ jobs:
         run: pip install -r requirements.txt
       # Runs a single command using the runners shell
       - name: build database
-        run: torify make
+        run: make
  
       - name: release
         uses: WebFreak001/deploy-nightly@v1.2.0
