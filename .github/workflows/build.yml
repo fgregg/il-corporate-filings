@@ -29,8 +29,9 @@ jobs:
       - name: setup requirements
         run: pip install -r requirements.txt
       # Runs a single command using the runners shell
+      - uses: tor-actions/setup-tor@main
       - name: build database
-        run: make
+        run: torify make
  
       - name: release
         uses: WebFreak001/deploy-nightly@v1.2.0
