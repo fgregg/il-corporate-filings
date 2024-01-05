@@ -44,5 +44,3 @@ corporate.zip : cdxallmst.csv cdxallnam.csv cdxallagt.csv cdxallarp.csv cdxallao
             https://api.zyte.com/v1/extract | \
             jq --raw-output .httpResponseBody | \
             base64 --decode > $@
-
-wget --timeout=60 --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:106.0) Gecko/20100101 Firefox/106.0" https://www.ilsos.gov/data/bs/$@
