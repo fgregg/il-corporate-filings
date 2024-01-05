@@ -30,6 +30,8 @@ jobs:
         run: pip install -r requirements.txt
       # Runs a single command using the runners shell
       - name: build database
+        env:
+          ZYTE_API_KEY: ${{ secrets.ZYTE_API_KEY }}
         run: make
  
       - name: release
